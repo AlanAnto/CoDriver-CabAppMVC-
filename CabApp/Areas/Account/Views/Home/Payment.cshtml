@@ -1,0 +1,60 @@
+﻿<style>
+    section{
+        border-radius:10px;
+    }
+</style>
+<body>
+    <section style="background-color: #bbbcbd;">
+    <div class="container py-5">
+        <div class="row d-flex justify-content-center">
+            <div class="col-md-9 col-lg-7 col-xl-5">
+                <div class="card">
+                    <img src="https://eldorar.com/en/sites/default/files/styles/970x576/public/field/image/temp-car-insurance.png?itok=5fDesDmP"
+                         class="card-img-top" alt="Black Chair" />
+                    <div class="card-body">
+                        <div class="card-title d-flex justify-content-between mb-0">
+                            <p class="text-muted mb-0">Amount</p>
+                            <p class="mb-0">₹500</p>
+                        </div>
+                    </div>
+                    <div class="rounded-bottom" style="background-color: #eee;">
+                        <div class="card-body">
+                            <p class="mb-4">Your payment details</p>
+
+
+
+                            <div class="form-outline mb-3">
+                                <input type="text" id="formControlLgXM8" class="form-control"
+                                       placeholder="1234 5678 1234 5678" />
+                                <label class="form-label" for="formControlLgXM8">Card Number</label>
+                            </div>
+
+
+
+                            <div class="row mb-3">
+                                <div class="col-6">
+                                    <div class="form-outline">
+                                        <input type="password" id="formControlLgExpk8" class="form-control"
+                                               placeholder="MM/YYYY" />
+                                        <label class="form-label" for="formControlLgExpk8">Expire</label>
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-outline">
+                                        <input type="password" id="formControlLgcvv8" class="form-control" placeholder="Cvv" />
+                                        <label class="form-label" for="formControlLgcvv8">cvv</label>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                            <a asp-action="Success" asp-controller="Home" asp-area="Account" class="btn btn-info btn-block">Pay now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+</body>

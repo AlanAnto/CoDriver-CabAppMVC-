@@ -1,0 +1,76 @@
+﻿@model LoginViewModel
+
+@{
+    ViewData["Title"] = "Login";
+}
+<style>
+    .divider:after,
+    .divider:before {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: #eee;
+    }
+</style>
+<section class="vh-100">
+    <div class="container py-5 h-100">
+        <div class="row d-flex align-items-center justify-content-center h-100">
+            <div class="col-md-8 col-lg-7 col-xl-6">
+                <img src="https://neetable.com/img/solutions/taxi-booking-app-development/taxi-booking-banner.png"
+                     class="img-fluid" alt="Phone image">
+            </div>
+            <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1">
+                <form asp-action="Login">
+                    <!-- Email input -->
+                    <div class="form-group">
+                    <label asp-for="Email" class="control-label"></label>
+                     <input asp-for="Email" class="form-control" />
+                      <span asp-validation-for="Email" class="text-danger"></span>
+                       </div>
+
+                    <!-- Password input -->
+                    <div class="form-group">
+                        <label asp-for="Password" class="control-label"></label>
+                        <input asp-for="Password" class="form-control" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-flex justify-content-around align-items-center mb-4">
+                        <!-- Checkbox -->
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                            <label class="form-check-label" for="form1Example3"> Remember me </label>
+                        </div>
+                        <a href="#!">Forgot password?</a>
+                    </div>
+
+                    <!-- Submit button -->
+                    <div class="form-group">
+                        <input type="submit" value="Login" class="btn btn-primary" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+@*
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Login">
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password" class="control-label"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Login" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>*@

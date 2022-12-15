@@ -1,0 +1,38 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+    }
+
+<style>
+    body
+    {
+        background-color: ghostwhite;
+    }
+    h1{
+        color:white;
+    }
+    img{
+        width:600px;
+        height:400px;
+        border-radius:10px;
+      
+
+
+    }
+    .content-box{
+        display:flex;
+        justify-content :start;
+    }
+   
+</style>
+
+<body>
+    <div class="content-box">
+        <div>
+            <h1>Welcome</h1>
+            <div style="position :absolute;top:50%;left:15%">
+                <a class="btn btn-primary" asp-area="Account" asp-controller="Home" asp-action="BookNow">Book Now</a>
+            </div>
+        </div>
+        <img style="margin-left:25%" src="https://images.pexels.com/photos/590059/pexels-photo-590059.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2">
+    </div>
+</body>

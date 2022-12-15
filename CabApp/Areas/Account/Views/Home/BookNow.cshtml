@@ -1,0 +1,44 @@
+﻿@model BookingViewModel
+
+@{
+    ViewData["Title"] = "Book Cabs";
+}
+
+<h1>Book Now</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-sm-6 offset-sm-3">
+        <form asp-action="BookNow">
+            <div class="form-group">
+                <label asp-for="PickUp"></label>
+                <select asp-for="PickUp" asp-items="@Html.GetEnumSelectList<Locations>()" class="form-control">
+                    <option>-- Select Pick Up --</option>
+                </select>
+                <span asp-validation-for="PickUp" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Destination"></label>
+                <select asp-for="Destination" asp-items="@Html.GetEnumSelectList<Locations>()" class="form-control">
+                    <option>-- Select Destination --</option>
+                </select>
+                <span asp-validation-for="Destination" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabRideTime" class="control-label"></label>
+                <input asp-for="CabRideTime" class="form-control" />
+                <span asp-validation-for="CabRideTime" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CabType"></label>
+                <select asp-for="CabType" asp-items="@Html.GetEnumSelectList<Types>()" class="form-control">
+                </select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Book Now" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
